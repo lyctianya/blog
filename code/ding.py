@@ -7,12 +7,12 @@ import urllib.parse
 import requests
 import json
 
-URL = "https://oapi.dingtalk.com/robot/send?access_token=f927e70f5fdbc0cb3ee529e59f65c7s772dcdec0beb5aa52bd2a42fd90fe8b910e1"
+URL = "https://oapi.dingtalk.com/robot/send?access_token=f927e70f5fdbc0cb3e529e59f65c7772cdec0beb5aa52bd2a42fd90fe8b910e1"
 
 
 def get_timestamp_sign():
     timestamp = str(round(time.time() * 1000))
-    secret = "SEC9ef228a12d4fc2c6e9b2d42cc24c7a0e2735f0b5054d77cc0dd0s4505e9dda65e07f"  # SEC开头的
+    secret = "SEC9ef228a12d4fc2c6e9b2d42cc24c7a0e27350b505477cc0dd045059dda65e07f"  # SEC开头的
     secret_enc = secret.encode('utf-8')
     string_to_sign = '{}\n{}'.format(timestamp, secret)
     string_to_sign_enc = string_to_sign.encode('utf-8')
